@@ -1,0 +1,20 @@
+## niceguy1575 Ignore File ##
+
+run_on_mac/data/
+run_on_mac/plot/
+run_on_mac/save/
+
+.txt
+**/*.txt
+
+.png
+**/.png
+
+.DS_Store
+
+**/*.ipynb_checkpoints/
+.ipynb_checkpoints
+.ipynb
+
+.swp
+.Rhistory
