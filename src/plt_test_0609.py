@@ -25,9 +25,15 @@ res = gdf2.copy()
 res['lon'] = res.geometry.x
 res['lat'] = res.geometry.y
 
+config = dict({
+    'scrollZoom': True,
+    'displayModeBar': True,
+    'editable': True
+})
+
 fig = px.scatter_mapbox(res,lat = 'lat',lon = 'lon',hover_name = 'sgg_nm',mapbox_style = 'open-street-map')
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-fig.show()
+fig.show(config=config)
 
 # chart-studio
 # API ID: niceguy1575
