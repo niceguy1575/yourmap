@@ -31,7 +31,6 @@ for feature in j_file["features"]:
     feature['id'] = gdf2.iloc[i:i+1].sgg_cd.to_list()[0]
     i += 1
 
-
 # figure
 gdf2['col'] = gdf2.index
 gdf_data = gdf2[['sgg_cd', 'sgg_nm','col']].copy()
@@ -46,8 +45,11 @@ fig = px.choropleth_mapbox(gdf_data, geojson=j_file, locations='sgg_cd', color='
                            opacity=0.5,
                            hover_name = 'sgg_nm'
                           )
-fig.show()
 
+
+
+fig = px.scatter_mapbox(gdf2,lat = 'lat',lon = 'lon',hover_name = 'Name',mapbox_style = 'open-street-map')
+fig.show()
 
 # chart-studio
 # API ID: niceguy1575
