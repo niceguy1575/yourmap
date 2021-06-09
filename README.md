@@ -32,8 +32,9 @@
 		*  Chart-Studio 연계 (100%)
 	3. 위치정보 주소정제 (100%)
 	4. URL return 및 notion embedding(100%)
-	5. 중복 좌표지역 Jittering (0%)
-	6. 모듈화 (0%)
+	5. 중복 좌표지역 Jittering (100%)
+	6. 모듈화 (60%)
+	7. figure hovering FIX ( 0% )
 
 ## Issue
 1. Chart-Studio 연동 시 500kb 이상의 지도는 생성되지 못함
