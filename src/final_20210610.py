@@ -86,6 +86,7 @@ class maps_upload(notion_map):
 		e2_res['lon'] = e2_res.geometry.x
 		e2_res['lat'] = e2_res.geometry.y
 		self.fig = px.scatter_mapbox(e2_res,lat = 'lat',lon = 'lon',hover_name = 'Name',mapbox_style = 'open-street-map')
+		self.fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
 		chart = py.plot(self.fig, filename = filename, auto_open = False, fileopt = 'overwrite', sharing = 'public')
 		return e2_res
