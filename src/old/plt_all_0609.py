@@ -4,18 +4,17 @@ import numpy as np
 from plotly import graph_objects as go
 from plotly import express as px
 from shapely import wkt
-import json
 import chart_studio
 import chart_studio.plotly as py
 from shapely.geometry import Point
-
+from datetime import datetime
 
 # data setup
-data = pd.read_csv("/Users/jongwon/git/yourmap/result/sgg_bind.txt", sep = "|")
-data['wkt'] = data.geometry.apply(wkt.loads)
+people = pd.read_csv("../result/people_with_area.txt", sep = "|")
+people['wkt'] = people.geometry.apply(wkt.loads)
 
-gdf = gpd.GeoDataFrame(data, geometry = 'wkt')
-gdf['ptr_wkt'] = gdf.centroid
+people_gdf = gpd.GeoDataFrame(people, geometry = 'wkt')
+people_gdf['ptr_wkt'] = people_gdf.centroid
 
 gdf2 = gdf[['sgg_cd', 'sgg_nm','ptr_wkt']].copy()
 gdf2 = gpd.GeoDataFrame(gdf2, geometry = 'ptr_wkt')

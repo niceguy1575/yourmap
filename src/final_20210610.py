@@ -11,18 +11,13 @@ import chart_studio
 import chart_studio.plotly as py
 from shapely.geometry import Point
 from plotly.offline import plot
-
+import os
 
 # data setup
-
-
-
 class notion_map:
 	def __init__(self,people,shp):
 		self.shp = gpd.read_file(shp)
 		self.people = pd.read_csv(people)
-
-
 
 	def get_centroid (self):
 		self.people = self.people[self.people.columns[:3]].dropna()
@@ -95,8 +90,6 @@ class maps_upload(notion_map):
 		plot(self.fig, filename=self.filename+'.html')
 		return os.getcwd()+"/"+self.filename+'.html'
 
-
-	
 	
 if __name__ == '__main__':
 	# 초기 변수 입력
