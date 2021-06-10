@@ -22,7 +22,7 @@
 3. Python에서 지도를 그리고, Chart-Studio에서 web embeding을 시킵니다.
 
 ## 진행사항
-현재까지 진행되고 있는 개발 진행 상황 (80%)
+현재까지 진행되고 있는 개발 진행 상황 (90%)
 
 	1. 개발 크루 모집 완료(suyo)
 	2. 기능 개발 (100%)
@@ -33,8 +33,8 @@
 	3. 위치정보 주소정제 (100%)
 	4. URL return 및 notion embedding(100%)
 	5. 중복 좌표지역 Jittering (100%)
-	6. 모듈화 (60%)
-	7. figure hovering FIX ( 0% )
+	6. 모듈화 (80%)
+		=> Class화 시킬것. 현재 일부만 구현됨.
 
 ## Issue
 1. Chart-Studio 연동 시 500kb 이상의 지도는 생성되지 못함
