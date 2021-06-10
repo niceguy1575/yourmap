@@ -11,9 +11,9 @@ import time
 #main definition
 if __name__ == "__main__":
 
-    emd_path = "/Users/jongwon/git/yourmap/data/shp/target/emd/"
-    sgg_path = "/Users/jongwon/git/yourmap/data/shp/target/sgg/"
-    save_path = "/Users/jongwon/git/yourmap/result/"
+    emd_path = "../data/emd/"
+    sgg_path = "../data/sgg/"
+    save_path = "../result/"
 
     emd_files = os.listdir(emd_path)
     sgg_files = os.listdir(sgg_path)
