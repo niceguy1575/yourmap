@@ -52,3 +52,13 @@ https://plotly.com/~niceguy1575/32/
 1. Chart-Studio 연동 시 500kb 이상의 지도는 생성되지 못함
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 👉 100개 이상의 Point 시각화에는 무리가 없을 것으로 보임.
+
+## 참고
+1. 행정동 형상정보 획득
+
+[https://www.juso.go.kr/addrlink/devLayerRequestList.do](https://www.juso.go.kr/addrlink/devLayerRequestList.do)
+
+2.  python을 이용한 노션 웹페이지 시각화
+
+[https://data101.oopy.io/good-place-to-live-alone?fbclid=IwAR2iPqJs_DeND8iPl2TMO2D-cr7b6M3WS-t8nKU7BktzCpz5_ZA2rD28uS0](https://data101.oopy.io/good-place-to-live-alone?fbclid=IwAR2iPqJs_DeND8iPl2TMO2D-cr7b6M3WS-t8nKU7BktzCpz5_ZA2rD28uS0)
+[https://data101.oopy.io/plolty-tutorial-guide-in-korean](https://data101.oopy.io/plolty-tutorial-guide-in-korean)
