@@ -169,7 +169,7 @@ if __name__ == '__main__':
 	# 초기 변수 입력
 	shp = '../data/sgg/SGG_ctr.shp' # 기존 source는 시도 정보가 누락되어있어 꼭 해당 shp을 이용해주시기 바랍니다.
 	api_id='niceguy1575' # api정보 입력 
-	api_key='ca9QST3zpIW8HPGxoi16'
+	api_key=''
 
 	# 클래스 사용 
 	maps = maps_upload(shp)
