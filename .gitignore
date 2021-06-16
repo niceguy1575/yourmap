@@ -1,8 +1,7 @@
 ## niceguy1575 Ignore File ##
 
-run_on_mac/data/
-run_on_mac/plot/
-run_on_mac/save/
+.p
+**/.p
 
 .png
 **/.png
