@@ -15,7 +15,7 @@ if __name__ == "__main__":
     mon = str(datetime.today().month).zfill(2)
     day = str(datetime.today().day).zfill(2)
     api_id = 'niceguy1575'
-    api_key = 'ca9QST3zpIW8HPGxoi16'
+    api_key = ''
 
     # 2. to gdf
     people = pd.read_csv("../result/people_with_area.txt", sep = "|")

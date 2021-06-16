@@ -23,10 +23,10 @@ def postUrl(url, headers, param = None, retries=10):
 
 if __name__ == "__main__":
     # 1. 사전에 notion에서 사전에 페이지 획득 필요!
-    url = 'https://api.notion.com/v1/databases/b8e198c5c45149bca0a64cca996c7a37/query'
+    url = 'https://api.notion.com/v1/databases//query'
     header = {
     #    "Notion-Version": "2021-05-13",
-        "Authorization": "Bearer secret_pPWC3kHqaPaHTHaAANpHa1RXVzv8Z5akflOyJZX7mQi",
+        "Authorization": "Bearer ",
         "Content-Type": "application/json"
     }
 

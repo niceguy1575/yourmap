@@ -22,10 +22,10 @@ def postUrl(url, headers, param = None, retries=10):
     return resp
 
 if __name__ == "__main__":
-    url = 'https://api.notion.com/v1/databases/29000bbca3e843b9854bf7eb75080efb/query'
+    url = 'https://api.notion.com/v1/databases//query'
     header = {
     #    "Notion-Version": "2021-05-13",
-        "Authorization": "Bearer secret_pPWC3kHqaPaHTHaAANpHa1RXVzv8Z5akflOyJZX7mQi",
+        "Authorization": "Bearer ",
         "Content-Type": "application/json"
     }
 

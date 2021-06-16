@@ -37,12 +37,13 @@ class notion_map:
 	def __init__(self,shp):
 		self.shp = gpd.read_file(shp)
 
-	def get_data(self):
-		url = 'https://api.notion.com/v1/databases/9572172efb494f81a1243b25bad749d8/query'
+	def get_data(self, sites, key):
+		# 1. 사전에 notion에서 사전에 페이지 획득 필요!
+		url = 'https://api.notion.com/v1/databases/' + sites + '/query'
 		header = {
-			"Notion-Version": "2021-05-13",
-			"Authorization": "Bearer secret_FE5UDs9aFOVAcMt1GdPjFdpXFe6OPa9cdwrZgrgL2Rc", # 권한정보 입력 
-			"Content-Type": "application/json"
+    		"Notion-Version": "2021-05-13",
+    		"Authorization": "Bearer " + key,
+    		"Content-Type": "application/json"
 		}
 
 		result_json = postUrl(url, headers = header)

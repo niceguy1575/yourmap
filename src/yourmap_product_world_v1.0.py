@@ -37,12 +37,12 @@ class notion_map:
 	def __init__(self,shp):
 		self.shp = gpd.read_file(shp)
 
-	def get_data(self):
+	def get_data(self, sites, key):
 		# 1. 사전에 notion에서 사전에 페이지 획득 필요!
-		url = 'https://api.notion.com/v1/databases/0039cb0f47d44103b28cf3b08a119c40/query'
+		url = 'https://api.notion.com/v1/databases/' + sites + '/query'
 		header = {
     		"Notion-Version": "2021-05-13",
-    		"Authorization": "Bearer ",
+    		"Authorization": "Bearer " + key,
     		"Content-Type": "application/json"
 		}
 
@@ -175,8 +175,8 @@ class maps_upload(notion_map):
 if __name__ == '__main__':
 	# 초기 변수 입력
 	shp = './SGG_ctr.shp' # 기존 source는 시도 정보가 누락되어있어 꼭 해당 shp을 이용해주시기 바랍니다.
-	api_id='' # api정보 입력 
-	api_key=''
+	api_id='niceguy1575' # api정보 입력 
+	api_key='ca9QST3zpIW8HPGxoi16'
 
 	# 클래스 사용 
 	maps = maps_upload(shp)
