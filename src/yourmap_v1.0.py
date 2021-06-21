@@ -182,5 +182,5 @@ if __name__ == '__main__':
 	# 클래스 사용 
 	maps = maps_upload(shp, your_sites, yourmap_notion_api_key)
 	maps.visualization(chart_studio_api_id, chart_studio_api_key)
-	#maps.to_html(api_id, api_key)
+	maps.to_html(chart_studio_api_id, chart_studio_api_key)
 

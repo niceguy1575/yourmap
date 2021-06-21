@@ -165,7 +165,7 @@ class maps_upload(notion_map):
 		mon = str(datetime.today().month).zfill(2)
 		day = str(datetime.today().day).zfill(2)
 		# 해당 차트를 api에 업로드 
-		chart_layer = 'yourmap_ver_openmate_' + mon + day
+		chart_layer = 'yourmap_ver_product_world_' + mon + day
 		chart_studio.tools.set_credentials_file(username = api_id, api_key = api_key)
 		chart = py.plot(self.fig, filename = chart_layer, auto_open = False, fileopt = 'overwrite', sharing = 'public')
 		# html형태로 현재의 위치에 저장
@@ -174,7 +174,7 @@ class maps_upload(notion_map):
 
 if __name__ == '__main__':
 	# 초기 변수 입력
-	shp = './SGG_ctr.shp' # 기존 source는 시도 정보가 누락되어있어 꼭 해당 shp을 이용해주시기 바랍니다.
+	shp = '../data/sgg/SGG_ctr.shp' # 기존 source는 시도 정보가 누락되어있어 꼭 해당 shp을 이용해주시기 바랍니다.
 	dump_path = "../result/"
 
 	with open(dump_path + "product_world_key_df.p", 'rb') as f:
@@ -189,4 +189,4 @@ if __name__ == '__main__':
 	# 클래스 사용 
 	maps = maps_upload(shp, your_sites, yourmap_notion_api_key)
 	maps.visualization(chart_studio_api_id, chart_studio_api_key)
-	#maps.to_html(api_id, api_key)
+	maps.to_html(chart_studio_api_id, chart_studio_api_key)
