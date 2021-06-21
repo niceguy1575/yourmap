@@ -95,9 +95,7 @@ if __name__ == '__main__':
 	# 초기 변수 입력
 	shp = '/home/suyo1207/2021/notion/사내노션업데이트/SGG_ctr.shp' # 기존 source는 시도 정보가 누락되어있어 꼭 해당 shp을 이용해주시기 바랍니다.
 	csv_file = "당신의 사는곳을 알려주세요 9572172efb494f81a1243b25bad749d8.csv" # csv파일명
-	username='niceguy1575'
-	api_key='ca9QST3zpIW8HPGxoi16'
-	filename = 'sgg_test_0609'
+
 
 	# 클래스 사용 
 	maps = maps_upload(csv_file,shp)
