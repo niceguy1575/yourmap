@@ -13,7 +13,7 @@ from shapely.geometry import Point
 from plotly.offline import plot
 from plotly import graph_objects as go
 from plotly import express as px
-
+import pickle as pck
 
 def postUrl(url, headers, param = None, retries=10):
     resp = None
@@ -86,9 +86,9 @@ class notion_map:
 		print("clear attribution") 
 
 class maps_upload(notion_map):
-	def __init__(self,shp):
+	def __init__(self,shp, sites, key):
 		super().__init__(shp)
-		super().get_data()
+		super().get_data(sites, key)
 		super().get_centroid()
 
 	def visualization(self,api_id,api_key,seed = 1575,cnt = 99999,width_m = 1000, height_m = 1000, threshold = 500):
@@ -175,11 +175,18 @@ class maps_upload(notion_map):
 if __name__ == '__main__':
 	# 초기 변수 입력
 	shp = './SGG_ctr.shp' # 기존 source는 시도 정보가 누락되어있어 꼭 해당 shp을 이용해주시기 바랍니다.
-	api_id='niceguy1575' # api정보 입력 
-	api_key='ca9QST3zpIW8HPGxoi16'
+	dump_path = "../result/"
+
+	with open(dump_path + "openmate_key_df.p", 'rb') as f:
+		key_df = pck.load(f)
+
+	your_sites = key_df['yourmap_sites'][0]
+	yourmap_notion_api_key = key_df['yourmap_notion_api_key'][0]
+	chart_studio_api_id = key_df['chart_studio_api_id'][0]
+	chart_studio_api_key = key_df['chart_studio_api_key'][0]
+
 
 	# 클래스 사용 
-	maps = maps_upload(shp)
-	maps.people
-	maps.visualization(api_id, api_key)
-	maps.to_html(api_id, api_key)
+	maps = maps_upload(shp, your_sites, yourmap_notion_api_key)
+	maps.visualization(chart_studio_api_id, chart_studio_api_key)
+	#maps.to_html(api_id, api_key)
