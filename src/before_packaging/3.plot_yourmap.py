@@ -77,8 +77,6 @@ if __name__ == "__main__":
 
     # 5. chart-studio
     # chart-studio
-    # API ID: niceguy1575
-    # API PW: ca9QST3zpIW8HPGxoi16
     chart_layer = 'yourmap_ver_openmate_' + mon + day
     chart_studio.tools.set_credentials_file(username = api_id, api_key = api_key)
     chart = py.plot(fig, filename = chart_layer, auto_open = False, fileopt = 'overwrite', sharing = 'public')
