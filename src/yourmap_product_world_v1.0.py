@@ -177,7 +177,7 @@ if __name__ == '__main__':
 	shp = './SGG_ctr.shp' # 기존 source는 시도 정보가 누락되어있어 꼭 해당 shp을 이용해주시기 바랍니다.
 	dump_path = "../result/"
 
-	with open(dump_path + "openmate_key_df.p", 'rb') as f:
+	with open(dump_path + "product_world_key_df.p", 'rb') as f:
 		key_df = pck.load(f)
 
 	your_sites = key_df['yourmap_sites'][0]
